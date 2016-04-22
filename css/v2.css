@@ -1,0 +1,104 @@
+.page3 .tanhao,
+.page3 .dot,
+.page4 .di,
+.page4 .line,
+.page5 div{
+	opacity:0;
+	transition:opacity ease 2s 1s;
+	position:absolute;
+	z-index:100;
+}
+.page3.swiper-slide-active .tanhao,
+.page3.swiper-slide-active .dot,
+.page4.swiper-slide-active .di,
+.page4.swiper-slide-active .line,
+.page5.swiper-slide-active div{
+	opacity:1;
+}
+
+.page3 .tanhao{ width:13.3%; height:14%;  top:23%; left:15%;
+	background:url(../images/page3_tan.png) no-repeat;
+	background-size:100% 100%;
+	animation: tanhaoMove 2s infinite linear;
+    -webkit-animation: tanhaoMove 2s infinite linear;
+	transform-origin:bottom right;
+}
+.page3 .dot{ width:5%; height:2.5%; position:absolute; top:12%; right:5%;
+	background:url(../images/page3_dot.png) no-repeat; 
+	background-size:100% 100%;
+	animation: tanhaoMove 2s infinite linear;
+    -webkit-animation: tanhaoMove 2s infinite linear;
+	transform-origin:bottom right;
+}
+
+.page4 .di{ width:8%; height:5%; position:absolute; top:53%; left:28%;
+	background:url(../images/page4_di.png) no-repeat;
+	background-size:100% 100%;
+	animation: diMove 2s infinite ease;
+    -webkit-animation: diMove 2s infinite ease;
+}
+.page4 .line{ width:19.2%; height:8.3%;position:absolute; top:41%; left:44.5%;
+	background:url(../images/page4_line.png) no-repeat;
+	background-size:100% 100%;
+	animation: lineMove 2s infinite ease;
+    -webkit-animation: lineMove 2s infinite ease;
+}
+
+
+@keyframes lineMove{
+	0%{transform:translateY(.5rem);}
+	50%{transform: translateY(0);}
+	100%{transform: translateY(.5rem);}
+}
+
+@keyframes diMove{
+	0%{ transform:translate(.5rem,.4rem);}
+	50%{ transform:translate(0,0);}	
+	100%{ transform:translate(.5rem,.4rem);}
+}
+
+@keyframes tanhaoMove{
+	0%{transform:scale(.8);}
+	50%{transform: scale(1.2);}
+	100%{transform: scale(.8);}
+}
+@-webkit-keyframes tanhaoMove {
+	0%{-webkit-transform: translateY(-0.6rem);}
+	50%{-webkit-transform: translateY(0rem);}
+	100%{-webkit-transform: translateY(-0.6rem);}
+}
+
+
+/*page5*/
+.page5 div{ position:absolute;
+	animation: numMove 1s infinite ease-out;
+    -webkit-animation: numMove 1s infinite ease-out;}
+.page5 .page_6{ top:53%; left:16%; width:5.2%; height:3.5%;}
+.page5 .page_5{ top:51%; left:30%; animation-delay:.5s; width:4.5%; height:3.6%;}
+.page5 .page_4{ top:52%; left:41%; width:3.4%; height:3.2%;}
+.page5 .page_3{ top:50%; left:55%;animation-delay:.5s; width:3.9%; height:3.2%;}
+.page5 .page_2{ top:51%; left:69%; width:3.3%; height:2.8%;}
+.page5 .page_1{ top:53%; left:80%;animation-delay:.5s;
+	width:2.9%; height:2.8%;}
+
+.page5 div.page_yinhao{ width:4.7%; height:2.55%;
+	top:42%; left:10%; animation:none;
+}
+.page5 div img{ width:100%;}
+
+@keyframes numMove{
+	0%{ transform:translateY(.5rem);}
+	50%{ transform:translateY(0);}	
+	100%{ transform:translateY(.5rem);}
+}
+@keyframes yinhaoMove{
+	0%{ transform:translateX(.5rem);}
+	50%{ transform:translateX(0);}	
+	100%{ transform:translateX(.5rem);}
+}
+
+
+
+/*pageMap*/
+.pageMap{ overflow:hidden; position:relative;}
+.map{ width:500%; height:250%; position:absolute; left:0;  background: url("../images/mapv2.jpg") no-repeat; background-size:100% 100%;}
